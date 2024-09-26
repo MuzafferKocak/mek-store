@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import AuthProvider from "./context/AuthProvider";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AuthProvider>
+        <AppRouter />
+      </AuthProvider>
+      {/*//* Routenstruktur in die Router-Datei verschoben*/}
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter> */}
     </div>
+    
   );
 }
 
