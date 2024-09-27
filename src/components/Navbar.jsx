@@ -20,6 +20,7 @@ const navigation = [
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
+  
   return (
     <nav className="bg-navbarColor md:text-sm">
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
@@ -31,7 +32,7 @@ const Navbar = () => {
             
           >
             <img className="rounded-full" src={logo} alt="Mek" width={60} height={60} />
-            <span className="text-gray-700 hover:text-gray-900 font-medium">
+            <span className="text-gray-700 font-medium">
               MeK
             </span>
           </div>

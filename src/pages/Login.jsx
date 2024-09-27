@@ -12,7 +12,7 @@ const Login = () => {
       console.log({ email, pass });
       login({ email, pass });
     } else {
-      alert("Benutzerangaben sind falsch");
+      alert("Benutzer Angaben sind falsch");
     }
   };
   return (
