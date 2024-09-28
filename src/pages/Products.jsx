@@ -1,11 +1,12 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+// import axios from "axios";
+// import React, { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 import Loading from "../components/Loading";
 import SearchInput from "../components/SearchInput";
 import { useProductsContext } from "../context/ProductProvider";
 
 const Products = () => {
+  //* eine neue context erstellt(ProductProvider)
   // const [products, setProducts] = useState([]);
   // const [loading, setLoading] = useState(false);
   // const [search, setSearch] = useState("");

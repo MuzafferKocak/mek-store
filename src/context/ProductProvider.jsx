@@ -30,7 +30,9 @@ const ProductProvider = ({children}) => {
 
   useEffect(() => {
     getData();
-  }, [search]); //! beim ändern search state, läuft getData func.
+    //! beim ändern search state, läuft getData func.
+  }, [search]); // eslint-disable-line
+  
     const values = {products, loading, setSearch, search}
   return (
     <ProductContext.Provider value={values}>{children}</ProductContext.Provider>

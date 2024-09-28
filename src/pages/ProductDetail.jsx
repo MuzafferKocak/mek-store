@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 
 const ProductDetail = () => {
@@ -23,7 +23,7 @@ const ProductDetail = () => {
   }
   useEffect(() => {
     getDetailData()
-  }, [])
+  }, []) // eslint-disable-line
   
   
   const {thumbnail, title, description, category, price, images} = state || {}
