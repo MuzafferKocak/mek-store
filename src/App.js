@@ -1,11 +1,14 @@
 import AuthProvider from "./context/AuthProvider";
+import ProductProvider from "./context/ProductProvider";
 import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
     <div>
       <AuthProvider>
-        <AppRouter />
+        <ProductProvider>
+          <AppRouter />
+        </ProductProvider>
       </AuthProvider>
       {/*//* Routenstruktur in die Router-Datei verschoben*/}
       {/* <BrowserRouter>
@@ -18,7 +21,6 @@ function App() {
         </Routes>
       </BrowserRouter> */}
     </div>
-    
   );
 }
 

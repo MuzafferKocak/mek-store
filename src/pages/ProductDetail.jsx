@@ -1,13 +1,30 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 
 const ProductDetail = () => {
   const navigate = useNavigate();
-  const params = useParams()
-  console.log(params);
-  const {state} = useLocation()
-  console.log(state);
+  const {id} = useParams()
+  console.log(id);
+  // const {state} = useLocation()
+  // console.log(state);
+  const [state, setState] =useState({})
+
+  const getDetailData =async()=> {
+    try {
+      const {data} = await axios.get(`https://dummyjson.com/products/${id}`)
+      setState(data)
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+    
+  }
+  useEffect(() => {
+    getDetailData()
+  }, [])
+  
   
   const {thumbnail, title, description, category, price, images} = state || {}
 
