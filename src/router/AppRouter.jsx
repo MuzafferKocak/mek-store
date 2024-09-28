@@ -7,6 +7,7 @@ import About from "../pages/About";
 import NotFound from "../pages/NotFound";
 
 import PrivateRouter from "./PrivateRouter";
+import ProductDetail from "../pages/ProductDetail";
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
         <Route path="dashboard" element={<PrivateRouter />}>
           <Route path="" element={<Home />} />
           <Route path="/dashboard/products" element={<Products />} />
+          <Route path="/dashboard/products/:id" element={<ProductDetail />} />
           {/* //*absolute path */}
           <Route path="/dashboard/about" element={<About />} />
           {/*  //*relative path */}
